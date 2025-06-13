@@ -1,7 +1,6 @@
 import os
 import zipfile
 from abc import ABC, abstractmethod
-
 import pandas as pd
 
 
@@ -43,7 +42,7 @@ class ZipDataIngestor(DataIngestor):
 
 
 # To improve extensibility, we create a factory class that returns the appropriate DataIngestor based on the file extension.
-# This is my application of the Factory Design Pattern, allowing us to easily add new data ingestion methods in the future without modifying existing code.
+# My application of the Factory Design Pattern: allows us to easily add new data ingestion methods in the future without modifying existing code.
 class DataIngestorFactory:
     @staticmethod
     def get_data_ingestor(file_extension: str) -> DataIngestor:
@@ -54,20 +53,19 @@ class DataIngestorFactory:
             raise ValueError(f"No ingestor available for file extension: {file_extension}")
 
 
-# Example usage:
+# Data ingestion script:
 if __name__ == "__main__":
-    # Specify the file path
+    # Specify the file path to your data
     file_path = "/Users/aamir/OneDrive/Desktop/E2E House Pricing Predictor/data/archive.zip"
 
     # Determine the file extension
     file_extension = os.path.splitext(file_path)[1]
 
-    # Get the appropriate DataIngestor
+    # Get the appropriate DataIngestor based on the file extension
     data_ingestor = DataIngestorFactory.get_data_ingestor(file_extension)
 
-    # Ingest the data and load it into a DataFrame
+    # Ingest the data and load it into a pandas DataFrame
     df = data_ingestor.ingest(file_path)
 
-    # Now df contains the DataFrame from the extracted CSV
+    # df contains the ingested data (e.g., CSV data from the ZIP file)
     print(df.head()) 
-    # pass
