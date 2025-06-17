@@ -1,4 +1,8 @@
-/analysis
+/analysis/EDA.ipynb
+/analysis/implementations/univariate_analysis.py
+/analysis/implementations/bivariate_analysis.py
+/analysis/implementations/missing_values_analysis.py
+/analysis/implementations/multivariate_analysis.py
 /explanations
 /mlruns
 /pipelines
@@ -17,3 +21,5 @@ src/model_building.py
 src/model_evaluator.py
 src/outlier_detection.py
 .venv
+__pycache__
+*.pyc
