@@ -103,13 +103,12 @@ class DataInspector:
 # DataInspector Example W/ Different Strategies:
 if __name__ == "__main__":
     # Load your data
-    # df = pd.read_csv('../../extracted_data/AmesHousing.csv')
+    df = pd.read_csv('../../extracted_data/AmesHousing.csv')
 
     # Init. the Data Inspector with a specific strategy
-    # inspector = DataInspector(DataTypesInspectionStrategy())
-    # inspector.execute_inspection(df)
+    inspector = DataInspector(DataTypesInspectionStrategy())
+    inspector.execute_inspection(df)
 
     # Change your strategy to use a different inspection method
-    # inspector.set_strategy(SummaryStatisticsInspectionStrategy())
-    # inspector.execute_inspection(df)
-    pass
+    inspector.set_strategy(SummaryStatisticsInspectionStrategy())
+    inspector.execute_inspection(df)
