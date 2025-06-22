@@ -106,7 +106,7 @@ class UnivariateAnalyzer:
         feature (str): The feature/column name to be analyzed.
 
         Returns:
-        None: Executes the current strategy's analyze method and visualizes the feature's distribution.
+        None: Executes the current strategy's analyze method to visualize the feature's distribution.
         """
         self._strategy.analyze(df, feature)
 
