@@ -2,7 +2,6 @@
 /pipelines
 /steps/data_splitter_step.py
 /steps/feature_engineering_step.py
-/steps/handle_missing_values_step.py
 /steps/model_building_step.py
 /steps/model_evaluator_step.py
 /steps/outlier_detection_step.py
