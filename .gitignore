@@ -1,6 +1,15 @@
 /mlruns
 /pipelines
-/steps
+/steps/data_splitter_step.py
+/steps/feature_engineering_step.py
+/steps/handle_missing_values_step.py
+/steps/model_building_step.py
+/steps/model_evaluator_step.py
+/steps/outlier_detection_step.py
+/steps/model_loader.py
+/steps/dynamic_importer.py
+/steps/prediction_service_loader.py
+/steps/predictor.py
 /tests
 /config.yaml
 /requirements.txt
